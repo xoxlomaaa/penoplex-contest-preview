@@ -419,15 +419,15 @@ body.login #backtoblog a:hover, body.login #nav a:hover { color: var(--shop-oran
 /* Each pair shares six tracks, while each new row sizes itself from its own works. */
 @media (min-width: 48rem) {
     @supports (grid-template-rows: subgrid) {
-        .pcx-work:not(.pcx-work--link) {
+        .pcx-gallery:not(.pcx-feed) > .pcx-work:not(.pcx-work--link) {
             grid-row: span 6;
             grid-template-rows: subgrid;
         }
-        .pcx-work:not(.pcx-work--link) :is(.pcx-work-heading, .pcx-work-details) {
+        .pcx-gallery:not(.pcx-feed) .pcx-work:not(.pcx-work--link) :is(.pcx-work-heading, .pcx-work-details) {
             grid-template-rows: subgrid;
         }
-        .pcx-work:not(.pcx-work--link) .pcx-work-heading { grid-row: span 3; }
-        .pcx-work:not(.pcx-work--link) .pcx-work-details { grid-row: span 2; }
+        .pcx-gallery:not(.pcx-feed) .pcx-work:not(.pcx-work--link) .pcx-work-heading { grid-row: span 3; }
+        .pcx-gallery:not(.pcx-feed) .pcx-work:not(.pcx-work--link) .pcx-work-details { grid-row: span 2; }
     }
 }
 
@@ -454,6 +454,43 @@ body.login #backtoblog a:hover, body.login #nav a:hover { color: var(--shop-oran
     .pcx-work--link:has(.pcx-video-player[open]) { grid-template-columns: minmax(0, 1fr); }
 }
 .pcx-photo-link:hover .pcx-media { outline: 1px solid var(--shop-orange); outline-offset: -1px; }
+
+.pcx-feed-page {
+    max-inline-size: 42rem;
+    margin-inline: auto;
+}
+.pcx-feed-page .page-title { margin-block-end: 1.25rem; }
+.pcx-gallery.pcx-feed {
+    grid-template-columns: minmax(0, 1fr);
+    gap: clamp(1rem, 3vw, 1.65rem);
+}
+.pcx-feed > .pcx-work {
+    grid-row: auto;
+    grid-template: auto / minmax(0, 1fr);
+    gap: 0;
+    padding: 0;
+}
+.pcx-feed .pcx-work-heading,
+.pcx-feed .pcx-work-details {
+    grid-row: auto;
+    grid-column: auto;
+    grid-template-rows: auto;
+    padding: clamp(.9rem, 3vw, 1.4rem);
+}
+.pcx-feed .pcx-work-heading h2 { font-size: clamp(1.7rem, 4vw, 2.35rem); }
+.pcx-feed > .pcx-work > .pcx-materials {
+    --pcx-preview-height: clamp(14rem, 69vw, 33rem);
+    grid-template-columns: minmax(0, 1fr);
+    margin: 0;
+}
+.pcx-feed .pcx-work-photos { gap: .2rem; }
+.pcx-feed .pcx-media {
+    max-height: none;
+    border-radius: 0;
+    background: #f1f0ee;
+}
+.pcx-feed .pcx-video-player { padding-inline: clamp(.9rem, 3vw, 1.4rem); }
+
 html:has(.pcx-photo-viewer[open]) { overflow: hidden; }
 .pcx-photo-viewer {
     width: min(54rem, calc(100% - 1.5rem));
