@@ -32,7 +32,7 @@
                 Войти            </a>
         </div>
     </div>
-</header><div class="preview-note"><p class="shell">Демонстрационная версия. Приём заявок и голосование доступны в рабочей версии сайта.</p></div>
+</header>
 <main class="shell" id="main-content" tabindex="-1">
 <h1 class="page-title">Галерея работ</h1>    <form class="pcx-gallery-filter" method="get" action="./gallery.html">
         
@@ -40,25 +40,64 @@
             Конкурс
             <select id="pcx-gallery-contest-1" name="contest">
                 <option value="">Все конкурсы</option>
+                                    <option value="12">
+                        Из ПЕНОПЛЭКС своими руками                    </option>
                                     <option value="11">
                         Малая архитектура                    </option>
                                     <option value="10">
                         Оранжевый город                    </option>
                                     <option value="9" selected="selected">
-                        Тестовый конкурс «Мост из ПЕНОПЛЭКС»                    </option>
+                        Мост из ПЕНОПЛЭКС                    </option>
                                     <option value="6">
-                        Тестовый конкурс «Маяк из ПЕНОПЛЭКС»                    </option>
+                        Маяк из ПЕНОПЛЭКС                    </option>
                             </select>
         </label>
         <button class="pcx-button" type="submit">Показать</button>
     </form>
-    <p class="panel" id="pcx-gallery-empty">В этом конкурсе пока нет опубликованных работ.</p>
+        <div class="pcx-gallery pcx-gallery--single">
+            <article class="panel pcx-work" id="work-3">
+            <header class="pcx-work-heading">
+                <h2>Макет моста</h2>
+                <p class="pcx-context">Мост из ПЕНОПЛЭКС</p>
+                <p class="hint">Автор — Не указан</p>
+            </header>
+            <div class="pcx-materials"><div class="pcx-work-photos"><a class="pcx-photo-link" href="./assets/work-3-0.jpg"><img class="pcx-media" src="./assets/work-3-0.jpg" alt="Макет моста" loading="lazy" decoding="async"></a></div></div>
+            <div class="pcx-work-details">
+                <div class="pcx-work-description"><p>Макет из ПЕНОПЛЭКС.</p>
+</div>
+                    <div class="pcx-votes">
+                    <span class="pcx-like" aria-label="Лайки: 0">        <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78Z"></path>
+        </svg>
+        <span class="pcx-like-count">0</span>
+        </span>
+            </div>
+                </div>
+        </article>
+            <dialog class="pcx-photo-viewer" aria-labelledby="pcx-photo-title-2">
+            <header class="pcx-photo-viewer-header">
+                <h2 id="pcx-photo-title-2" class="pcx-photo-viewer-title"></h2>
+                <button class="pcx-button" type="button" data-photo-close="" autofocus="">Закрыть</button>
+            </header>
+            <div class="pcx-photo-viewer-stage">
+                <img class="pcx-photo-viewer-image" alt="" hidden="">
+                <p class="pcx-photo-viewer-status" role="status"></p>
+            </div>
+            <div class="pcx-photo-viewer-controls" hidden="">
+                <button class="pcx-button" type="button" data-photo-step="-1" aria-label="Предыдущее фото">Назад</button>
+                <span class="pcx-photo-viewer-count" aria-live="polite"></span>
+                <button class="pcx-button" type="button" data-photo-step="1" aria-label="Следующее фото">Вперёд</button>
+            </div>
+        </dialog>
+    </div>
+    
 </main>
 <footer class="site-footer">
     <div class="shell">
         <p>Творческие конкурсы ПЕНОПЛЭКС</p>
-        <p class="hint">Демонстрационные данные</p>    </div>
+            </div>
 </footer>
+
 
 
 

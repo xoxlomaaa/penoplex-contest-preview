@@ -1,4 +1,2 @@
-.preview-note{background:#fff4eb;border-block-end:1px solid var(--shop-line);color:var(--shop-ink)}
-.preview-note p{margin:0;padding-block:.6rem;font-size:.9375rem}
-.preview-form [disabled]{opacity:.7;cursor:default}
-.preview-form input:not([type="checkbox"]),.preview-form textarea{font:inherit}
+.static-form [disabled]{opacity:.7;cursor:default}
+.static-form input:not([type="checkbox"]),.static-form textarea{font:inherit}

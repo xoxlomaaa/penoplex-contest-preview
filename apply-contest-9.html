@@ -32,10 +32,10 @@
                 Войти            </a>
         </div>
     </div>
-</header><div class="preview-note"><p class="shell">Демонстрационная версия. Приём заявок и голосование доступны в рабочей версии сайта.</p></div>
+</header>
 <main class="shell" id="main-content" tabindex="-1">
-<h1 class="page-title">Отправить работу</h1>    <div class="panel pcx-form preview-form">
-        <h2>Тестовый конкурс «Мост из ПЕНОПЛЭКС»</h2>
+<h1 class="page-title">Отправить работу</h1>    <div class="panel pcx-form static-form">
+        <h2>Мост из ПЕНОПЛЭКС</h2><p class="hint">Отправка заявок недоступна по этой ссылке.</p>
         
         
         
@@ -55,7 +55,7 @@
             <div class="pcx-field">
                 <label for="pcx-email">E-mail для связи</label>
                 <input id="pcx-email" type="email" maxlength="150" required="" aria-describedby="pcx-email-hint" disabled="">
-                <p class="hint" id="pcx-email-hint">На стенде используйте вымышленный адрес на .invalid.</p>
+                <p class="hint" id="pcx-email-hint">Укажите адрес для связи с автором работы.</p>
             </div>
         </div>
         <fieldset class="pcx-attachments">
@@ -72,7 +72,7 @@
                     <label for="pcx-video">Видео</label>
                     <input id="pcx-video" type="file" accept="video/mp4,video/webm" aria-describedby="pcx-video-hint" disabled="">
                     <p id="pcx-video-hint" class="hint">MP4 или WebM, до 25 МБ и 90 секунд. Достаточно одного вложения.</p>
-                    
+                    <video class="pcx-media" id="pcx-video-preview" controls="" playsinline="" preload="metadata" hidden=""></video>
                 </div>
                 <div class="pcx-field pcx-field--wide">
                     <label for="pcx-video-url">Или ссылка на VK Видео</label>
@@ -82,7 +82,7 @@
             </div>
         </fieldset>
         <details class="pcx-rules"><summary class="pcx-button">Правила публикации</summary>
-            <p>Соберите вымышленный макет моста и приложите фото или видео. Для проверки используйте вымышленный адрес на .invalid.</p>
+            <p>Соберите макет моста и приложите фото или видео.</p>
         </details>
         <label class="pcx-check"><input type="checkbox" value="yes" required="" disabled=""> Я ознакомился с правилами публикации.</label>
         <button class="pcx-button" type="submit" disabled="">Отправить работу</button>
@@ -92,7 +92,7 @@
 <footer class="site-footer">
     <div class="shell">
         <p>Творческие конкурсы ПЕНОПЛЭКС</p>
-        <p class="hint">Демонстрационные данные</p>    </div>
+            </div>
 </footer>
 
 
