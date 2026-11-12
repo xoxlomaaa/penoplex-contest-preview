@@ -1,5 +1,42 @@
 "use strict";
 
+for (const photos of document.querySelectorAll(".pcx-feed .pcx-work-photos")) {
+  const slides = Array.from(photos.querySelectorAll(".pcx-photo-link"));
+  if (slides.length < 2) continue;
+
+  const controls = document.createElement("div");
+  controls.className = "pcx-album-toolbar";
+  controls.setAttribute("role", "group");
+  controls.setAttribute("aria-label", "Фотографии работы");
+  const previous = document.createElement("button");
+  const next = document.createElement("button");
+  const count = document.createElement("span");
+  count.setAttribute("aria-live", "polite");
+
+  for (const [button, direction, label] of [[previous, -1, "Предыдущее фото в работе"], [next, 1, "Следующее фото в работе"]]) {
+    button.type = "button";
+    button.setAttribute("aria-label", label);
+    button.innerHTML = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="' +
+      (direction < 0 ? "m14 6-6 6 6 6" : "m10 6 6 6-6 6") +
+      '" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+    button.addEventListener("click", event => {
+      const animate = event.detail > 0 && !matchMedia("(prefers-reduced-motion: reduce)").matches;
+      photos.scrollBy({left: photos.clientWidth * direction, behavior: animate ? "smooth" : "instant"});
+    });
+  }
+
+  function updateControls() {
+    const index = Math.max(0, Math.min(slides.length - 1, Math.round(photos.scrollLeft / photos.clientWidth)));
+    count.textContent = (index + 1) + " / " + slides.length;
+    previous.disabled = index === 0;
+    next.disabled = index === slides.length - 1;
+  }
+  controls.append(previous, count, next);
+  photos.after(controls);
+  photos.addEventListener("scroll", updateControls, {passive: true});
+  updateControls();
+}
+
 for (const player of document.querySelectorAll(".pcx-video-player")) {
   const slot = player.querySelector(".pcx-video-frame");
   const template = slot.querySelector("template");
