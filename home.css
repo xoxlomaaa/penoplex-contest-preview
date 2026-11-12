@@ -1,15 +1,15 @@
 .pcx-home main.shell { width: 100%; padding-block: 0 5rem; }
-.home-hero { background: #fff; border-bottom: 1px solid var(--shop-line); }
+.home-hero { background: #fff; }
 .home-hero-inner { display: grid; align-items: center; gap: 2rem; padding-block: clamp(2.5rem,6vw,4.5rem); }
 .home-hero-copy { max-width: 46rem; }
-.home-hero h1 { max-width: 17ch; font-size: clamp(2.35rem,5.6vw,4.6rem); font-weight: 600; line-height: 1.1; }
+.home-hero h1 { max-width: 17ch; font-size: clamp(2rem,4.5vw,3.7rem); font-weight: 400; line-height: 1.1; }
 .home-hero h1 span { display: inline; color: var(--shop-muted); }
 .home-hero-copy p { margin: 1.25rem 0 1.75rem; max-width: 42ch; font-size: 1.15rem; color: var(--shop-muted); }
 .home-hero-art { min-width: 0; }
 .home-hero-art .home-contest-cover { aspect-ratio: 4/3; margin: 0; border-radius: 14px; }
 .home-jumps-wrap { border-bottom: 1px solid var(--shop-line); background: #fff; }
 .home-jumps { display: flex; flex-wrap: wrap; gap: .5rem 2rem; padding-block: .65rem; }
-.home-jumps a { display: flex; align-items: center; min-height: 44px; text-decoration: none; color: var(--shop-muted); font-weight: 500; }
+.home-jumps a { display: flex; align-items: center; min-height: 44px; text-decoration: none; color: var(--shop-muted); font-weight: 400; }
 .home-jumps a:hover { color: var(--shop-ink); }
 .home-contests { display: grid; gap: clamp(3rem,6vw,5rem); padding-block-start: clamp(2.5rem,5vw,4rem); }
 .home-group { min-width: 0; scroll-margin-top: 8rem; }
@@ -18,7 +18,7 @@
 .home-group-heading p, .home-empty { color: var(--shop-muted); margin: 0; }
 .home-empty { padding: 1.5rem 0; border-block-start: 1px solid var(--shop-line); }
 .home-contest-list { display: grid; grid-template-columns: minmax(0,1fr); gap: 1.75rem; }
-.home-contest { min-width: 0; display: flex; flex-direction: column; padding: 1.5rem; border: 1px solid var(--shop-line); border-radius: 14px; background: #fff; overflow-wrap: anywhere; }
+.home-contest { min-width: 0; display: flex; flex-direction: column; padding: 0; border: 0; border-radius: 0; background: transparent; overflow-wrap: anywhere; }
 .home-contest-cover { position: relative; display: grid; place-items: center; aspect-ratio: 16/9; margin-block-end: 1.5rem; overflow: hidden; border-radius: 9px; background: #efede9; }
 .home-contest-cover img { position: absolute; inset: 0; display: block; width: 100%; height: 100%; object-fit: cover; }
 .home-contest-cover--placeholder img { position: static; width: min(60%,16rem); height: auto; }
@@ -44,6 +44,6 @@
     .home-hero-inner { padding-block: 2.5rem; }
     .home-jumps { gap: .25rem 1.1rem; }
     .home-jumps a { font-size: .9375rem; }
-    .home-contest { padding: 1.15rem; }
+    .home-contest { padding: 0; }
     .home-contest-cover { margin-block-end: 1.2rem; }
 }
